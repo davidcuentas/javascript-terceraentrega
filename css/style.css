@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.tarjeta-producto {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+}
+
+.tarjeta-producto img {
+    max-width: 100%;
+    max-height: 180px;
+}
