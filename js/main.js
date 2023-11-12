@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             tarjeta.appendChild(imagen);
 
-            const nombre = document.createElement("p");
+            const nombre = document.createElement("h2");
             nombre.textContent = producto.nombre;
             tarjeta.appendChild(nombre);
 
