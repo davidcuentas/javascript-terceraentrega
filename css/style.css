@@ -42,3 +42,8 @@ h2{
     max-width: 100%;
     max-height: 180px;
 }
+
+.contenedorTarjetasProductos {
+    display: flex;
+    flex-wrap: wrap;
+}
