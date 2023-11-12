@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonPigmento = document.getElementById("botonPigmento");
     const botonIngredientes = document.getElementById("botonIngredientes");
     const botonTodos = document.getElementById("botonTodos");
+    const botonInicio = document.getElementById("botonInicio")
 
     let categoriaSeleccionada = localStorage.getItem("categoriaSeleccionada") || "Todos";
 
@@ -148,6 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
     botonPigmento.addEventListener("click", () => mostrarProductos("Pigmento"));
     botonIngredientes.addEventListener("click", () => mostrarProductos("Ingredientes"));
     botonTodos.addEventListener("click", () => mostrarTodos());
+    botonInicio.addEventListener("click", () => limpiar());
 
     function mostrarTodos() {
         categoriaSeleccionada = "Todos";
@@ -159,6 +161,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const productosFiltrados = (categoria === "Todos") ? productos : productos.filter(producto => producto.categoria === categoria);
         renderizarTarjetasProductos(productosFiltrados);
         localStorage.setItem("categoriaSeleccionada", categoria);
+    }
+
+    function limpiar() {
+        categoriaSeleccionada = "";
+        contenedorTarjetasProductos.innerHTML = "";
     }
 
     function renderizarTarjetasProductos(productos) {
